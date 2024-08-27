@@ -164,17 +164,17 @@ services:
       traefik:
         condition: service_healthy
 
-  zabbix-agent:
-    image: ${ZABBIX_AGENT_IMAGE_TAG}
-    environment:
-      ZBX_HOSTNAME: Zabbix server
-      ZBX_SERVER_HOST: zabbix-server
-    networks:
-      - zabbix-network
-    restart: unless-stopped
-    depends_on:
-      - postgres
-      - zabbix-server
+  # zabbix-agent:
+  #   image: ${ZABBIX_AGENT_IMAGE_TAG}
+  #   environment:
+  #     ZBX_HOSTNAME: Zabbix server
+  #     ZBX_SERVER_HOST: zabbix-server
+  #   networks:
+  #     - zabbix-network
+  #   restart: unless-stopped
+  #   depends_on:
+  #     - postgres
+  #     - zabbix-server
 
   traefik:
     image: ${TRAEFIK_IMAGE_TAG}
