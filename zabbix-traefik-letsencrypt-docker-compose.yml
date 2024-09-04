@@ -208,7 +208,7 @@ services:
     ports:
       - "80:80"
       - "443:443"
-      - "10050:10050"
+      # - "10050:10050"
       - "10051:10051"
     healthcheck:
       test: ["CMD", "wget", "http://localhost:8082/ping","--spider"]
